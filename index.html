@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirect Based on OS</title>
+    <script>
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/windows phone/i.test(userAgent)) {
+                window.location.href = "https://github.com/Mik-Jhon/Other";
+            } else if (/android/i.test(userAgent)) {
+                window.location.href = "https://github.com/Mik-Jhon/Other";
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://github.com/Mik-Jhon/Other";
+            } else if (/Win/i.test(userAgent)) {
+                window.location.href = "https://github.com/Mik-Jhon/Win";
+            } else if (/Mac/i.test(userAgent)) {
+                window.location.href = "https://github.com/Mik-Jhon/Other";
+            } else if (/Linux/i.test(userAgent)) {
+                window.location.href = "https://github.com/Mik-Jhon/Linux";
+            } else {
+                window.location.href = "https://github.com/Mik-Jhon/Other";
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>Redirecting based on your operating system...</p>
+</body>
+</html>
